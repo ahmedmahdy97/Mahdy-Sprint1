@@ -1,0 +1,18 @@
+<div class="header-container left">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" class="navigation">
+      <i class="nb-menu"></i>
+    </a>
+    <div class="logo" (click)="goToHome()"><img src="/assets/logo.png" height="80px" width="64px">
+      <span>DevCOPS</span>
+    </div>
+  </div>
+  <ngx-theme-switcher></ngx-theme-switcher>
+  <span><a href="/#/store">Store</a></span>
+</div>
+
+<nb-actions size="medium" class="header-container right">
+  <nb-action>
+    <nb-user [menu]="userMenu" [name]="user?.username" (menuClick)="onMenuClick($event)"></nb-user>
+  </nb-action>
+</nb-actions>
